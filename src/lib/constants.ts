@@ -11,7 +11,7 @@ export const SITE_CONFIG = {
   founder: "Shems",
   socials: {
     github: "https://github.com/arqdev",
-    linkedin: "https://linkedin.com/company/arqdev",
+    linkedin: "https://www.linkedin.com/in/hichame-el-ghaouti-874b31376",
   },
 } as const;
 
