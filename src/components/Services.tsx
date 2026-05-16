@@ -7,14 +7,14 @@ import { SERVICES } from "@/lib/constants";
 
 export default function Services() {
   return (
-    <section id="services" className="py-24 bg-surface-mid">
+    <section id="services" className="py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Header */}
         <ScrollReveal>
           <p className="font-mono text-[10px] tracking-[6px] uppercase text-accent-purple mb-4">
             △ SERVICES
           </p>
-          <h2 className="text-3xl md:text-[44px] font-bold text-[#f0f0f5] tracking-tight leading-tight">
+          <h2 className="text-3xl md:text-[44px] font-bold text-white tracking-tight leading-tight">
             Ce qu&apos;on fait
           </h2>
         </ScrollReveal>
@@ -26,19 +26,19 @@ export default function Services() {
               <div
                 className="group relative p-6 rounded-2xl overflow-hidden hover:scale-[1.03] transition-all duration-500"
                 style={{
-                  background: "linear-gradient(160deg, rgba(18,18,36,0.9) 0%, rgba(12,12,26,0.95) 40%, rgba(18,18,36,0.9) 100%)",
-                  border: "1px solid rgba(147,51,234,0.08)",
-                  boxShadow: "0 4px 30px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.03)",
+                  background: "linear-gradient(160deg, rgba(19,19,31,0.9) 0%, rgba(15,15,26,0.95) 40%, rgba(19,19,31,0.9) 100%)",
+                  border: "1px solid rgba(147,51,234,0.1)",
+                  boxShadow: "0 4px 30px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.04)",
                 }}
                 onMouseEnter={(e) => {
                   const el = e.currentTarget;
                   el.style.borderColor = service.accent + "30";
-                  el.style.boxShadow = `0 0 40px ${service.accent}12, 0 4px 30px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.05)`;
+                  el.style.boxShadow = `0 0 40px ${service.accent}12, 0 4px 30px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.5)`;
                 }}
                 onMouseLeave={(e) => {
                   const el = e.currentTarget;
                   el.style.borderColor = "rgba(147,51,234,0.08)";
-                  el.style.boxShadow = "0 4px 30px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.03)";
+                  el.style.boxShadow = "0 4px 30px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.03)";
                 }}
               >
                 {/* Top shine line */}
@@ -65,19 +65,19 @@ export default function Services() {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-lg font-bold text-[#f0f0f5] group-hover:text-brand transition-colors mb-1">
+                <h3 className="text-lg font-bold text-white group-hover:text-brand transition-colors mb-1">
                   {service.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-sm text-white/40 mb-4">
+                <p className="text-sm text-white/50 mb-4">
                   {service.description}
                 </p>
 
                 {/* Details */}
                 <ul className="space-y-1.5">
                   {service.details.map((detail) => (
-                    <li key={detail} className="flex items-center gap-2 text-xs text-white/30">
+                    <li key={detail} className="flex items-center gap-2 text-xs text-white/40">
                       <span
                         className="w-1 h-1 rounded-full shrink-0"
                         style={{ backgroundColor: service.accent }}

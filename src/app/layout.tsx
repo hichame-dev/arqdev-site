@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Nunito, Space_Mono, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { baseMetadata } from "@/lib/metadata";
+import Starfield from "@/components/Starfield";
 
 const nunito = Nunito({
   subsets: ["latin"],
@@ -41,7 +42,10 @@ export default function RootLayout({
       <body
         className={`${nunito.variable} ${spaceMono.variable} ${jetbrainsMono.variable} antialiased font-sans bg-surface text-foreground`}
       >
-        {children}
+        <Starfield />
+        <div className="relative" style={{ zIndex: 1 }}>
+          {children}
+        </div>
       </body>
     </html>
   );

@@ -3,13 +3,15 @@
 import { motion } from "framer-motion";
 import WorkflowNode from "./WorkflowNode";
 import WorkflowConnection from "./WorkflowConnection";
+import WorkflowThree from "./WorkflowThree";
 import { WORKFLOW_NODES } from "@/lib/constants";
 
 export default function WorkflowSchema() {
   const nodes = WORKFLOW_NODES;
 
   return (
-    <div className="w-full max-w-[1120px] mx-auto px-4">
+    <div className="w-full max-w-[1120px] mx-auto px-4 relative">
+      <WorkflowThree />
       <svg
         viewBox="0 0 1120 320"
         width="100%"

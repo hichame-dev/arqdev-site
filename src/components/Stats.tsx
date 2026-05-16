@@ -12,10 +12,10 @@ interface StatItem {
 }
 
 const STATS: StatItem[] = [
-  { value: 2, suffix: "+", label: "Apps publiées", color: "#9333ea" },
+  { value: 1, suffix: "",  label: "App publiée", color: "#9333ea" },
+  { value: 1, suffix: "",  label: "En cours de dev", color: "#f08dff" },
   { value: 5, suffix: "+", label: "Technos maîtrisées", color: "#c084fc" },
   { value: 100, suffix: "%", label: "Code sur mesure", color: "#3ee0f5" },
-  { value: 4, suffix: "", label: "Langues parlées", color: "#f08dff" },
 ];
 
 function AnimatedCounter({ value, suffix, color }: { value: number; suffix: string; color: string }) {
@@ -50,7 +50,7 @@ function AnimatedCounter({ value, suffix, color }: { value: number; suffix: stri
 
 export default function Stats() {
   return (
-    <section className="py-20 bg-surface relative overflow-hidden">
+    <section className="py-20 relative overflow-hidden">
       {/* Background glow */}
       <div
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[300px] rounded-full blur-[200px]"
@@ -69,7 +69,7 @@ export default function Stats() {
                 <div className="text-4xl md:text-5xl font-extrabold tracking-tight mb-2">
                   <AnimatedCounter value={stat.value} suffix={stat.suffix} color={stat.color} />
                 </div>
-                <p className="font-mono text-[11px] tracking-[2px] text-white/30 uppercase">
+                <p className="font-mono text-[11px] tracking-[2px] text-white/40 uppercase">
                   {stat.label}
                 </p>
                 {/* Underline glow */}

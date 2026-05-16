@@ -8,14 +8,14 @@ import { PROJECTS } from "@/lib/constants";
 
 export default function Projects() {
   return (
-    <section id="projets" className="py-24 bg-surface-mid">
+    <section id="projets" className="py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Header */}
         <ScrollReveal>
           <p className="font-mono text-[10px] tracking-[6px] uppercase text-accent-cyan mb-4">
             △ PROJETS
           </p>
-          <h2 className="text-3xl md:text-[44px] font-bold text-[#f0f0f5] tracking-tight leading-tight">
+          <h2 className="text-3xl md:text-[44px] font-bold text-white tracking-tight leading-tight">
             Ce qu&apos;on construit
           </h2>
         </ScrollReveal>
@@ -37,7 +37,7 @@ export default function Projects() {
                   <div
                     className="absolute inset-0"
                     style={{
-                      background: `linear-gradient(to top, rgba(12,12,26,0.95) 0%, rgba(12,12,26,0.5) 35%, rgba(12,12,26,0.1) 65%, transparent 100%)`,
+                      background: `linear-gradient(to top, rgba(13,13,25,0.95) 0%, rgba(13,13,25,0.5) 35%, rgba(13,13,25,0.1) 65%, transparent 100%)`,
                     }}
                   />
                 </div>
@@ -68,7 +68,7 @@ export default function Projects() {
                       </div>
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-[#f0f0f5]">
+                      <h3 className="text-xl font-bold text-white">
                         {project.title}
                       </h3>
                       <p
@@ -81,7 +81,7 @@ export default function Projects() {
                   </div>
 
                   {/* Description */}
-                  <p className="text-sm text-white/45 leading-relaxed mb-6">
+                  <p className="text-sm text-white/55 leading-relaxed mb-6">
                     {project.description}
                   </p>
 
@@ -90,7 +90,7 @@ export default function Projects() {
                     {project.features.map((feature) => (
                       <li
                         key={feature}
-                        className="flex items-start gap-2 text-sm text-white/35"
+                        className="flex items-start gap-2 text-sm text-white/45"
                       >
                         <span
                           className="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"

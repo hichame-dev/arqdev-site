@@ -8,9 +8,10 @@ export const SITE_CONFIG = {
   email: "hichame_dev@outlook.com",
   phone: "+33 6 XX XX XX XX",
   location: "Marseille, France",
-  founder: "Shems",
+  founder: "Hichame",
+  siret: "103 552 063 00010",
   socials: {
-    github: "https://github.com/arqdev",
+    github: "https://github.com/hichame-dev",
     linkedin: "https://www.linkedin.com/in/hichame-el-ghaouti-874b31376",
   },
 } as const;
@@ -120,15 +121,16 @@ export const SERVICES: Service[] = [
     ],
   },
   {
-    icon: "/asset/robot-ai.png",
-    title: "IA & Auto",
-    description: "Agents IA \u2014 MCP \u00b7 Groq",
-    accent: "#f08dff",
+    icon: "/asset/security.png",
+    title: "Formation IA",
+    description: "Accompagner vos \u00e9quipes \u00e0 ma\u00eetriser l'IA",
+    accent: "#f59e0b",
     details: [
-      "Agents IA conversationnels",
-      "Automatisation workflows",
-      "Int\u00e9gration MCP",
-      "Groq / Llama",
+      "Audit IA de votre entreprise",
+      "Ateliers pratiques sur mesure",
+      "Int\u00e9gration dans vos process",
+      "R\u00e9duire les co\u00fbts op\u00e9rationnels",
+      "Accompagnement post-formation",
     ],
   },
 ];
@@ -171,4 +173,5 @@ export const TECH_STACK_ROW2: TechItem[] = [
   { name: "Tailwind CSS", color: "#38bdf8" },
   { name: "Docker", color: "#2496ed" },
   { name: "Groq AI", color: "#f08dff" },
+  { name: "Anthropic", color: "#c084fc" },
 ];

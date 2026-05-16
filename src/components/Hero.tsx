@@ -2,34 +2,32 @@
 
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
-import WorkflowSchema from "./WorkflowSchema";
+import HeroSphere from "./HeroSphere";
 import TypingText from "./TypingText";
 import MagneticButton from "./MagneticButton";
 import DoubleTriangle from "./DoubleTriangle";
 
 export default function Hero() {
   return (
-    <section id="hero" className="relative h-screen overflow-hidden bg-surface">
+    <section id="hero" className="relative h-screen overflow-hidden">
       {/* === BACKGROUND LAYERS === */}
 
-      {/* Layer 1: Gradient mesh — smooth HD ellipses */}
+      {/* Layer 1: Gradient mesh — espace profond */}
       <div className="absolute inset-0 overflow-hidden">
+        {/* Blob gauche — violet */}
         <div
-          className="absolute top-[5%] left-[15%] w-[700px] h-[700px] rounded-full blur-[180px] animate-float"
-          style={{ background: "radial-gradient(circle, rgba(147, 51, 234, 0.2) 0%, rgba(147, 51, 234, 0.08) 50%, transparent 70%)" }}
+          className="absolute inset-y-0 left-0 w-[60%]"
+          style={{ background: "radial-gradient(ellipse 40% 60% at 0% 50%, rgba(109, 40, 217, 0.12) 0%, transparent 70%)" }}
         />
+        {/* Blob droite — cyan */}
         <div
-          className="absolute top-[45%] right-[5%] w-[600px] h-[600px] rounded-full blur-[160px] animate-float"
-          style={{ background: "radial-gradient(circle, rgba(192, 132, 252, 0.18) 0%, rgba(192, 132, 252, 0.06) 50%, transparent 70%)", animationDelay: "2s" }}
+          className="absolute inset-y-0 right-0 w-[60%]"
+          style={{ background: "radial-gradient(ellipse 35% 50% at 100% 50%, rgba(6, 182, 212, 0.07) 0%, transparent 70%)" }}
         />
+        {/* Halo supérieur */}
         <div
-          className="absolute bottom-[5%] left-[35%] w-[500px] h-[500px] rounded-full blur-[140px] animate-float"
-          style={{ background: "radial-gradient(circle, rgba(62, 224, 245, 0.14) 0%, rgba(62, 224, 245, 0.04) 50%, transparent 70%)", animationDelay: "4s" }}
-        />
-        {/* Extra ambient glow — center */}
-        <div
-          className="absolute top-[30%] left-[40%] w-[800px] h-[400px] rounded-full blur-[200px]"
-          style={{ background: "radial-gradient(ellipse, rgba(147, 51, 234, 0.08) 0%, transparent 60%)" }}
+          className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[400px]"
+          style={{ background: "radial-gradient(ellipse 80% 100% at 50% 0%, rgba(88, 28, 135, 0.1) 0%, transparent 70%)" }}
         />
       </div>
 
@@ -54,13 +52,17 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="font-mono text-[10px] tracking-[7px] uppercase text-brand mb-6"
+          className="font-mono text-[13px] font-bold tracking-[7px] uppercase mb-6"
+          style={{ color: "#7a91b8" }}
         >
           DÉVELOPPEUR FULLSTACK · FREELANCE · MARSEILLE
         </motion.p>
 
         {/* Logo — staggered letter animation */}
-        <h1 className="text-[60px] sm:text-[80px] md:text-[100px] lg:text-[120px] font-extrabold tracking-[12px] md:tracking-[14px] text-[#f0f0f5] leading-none flex items-center">
+        <h1
+          className="text-[60px] sm:text-[80px] md:text-[100px] lg:text-[120px] font-extrabold tracking-[12px] md:tracking-[14px] leading-none flex items-center"
+          style={{ color: "#f0ecff", textShadow: "0 0 80px rgba(139,92,246,0.3)" }}
+        >
           {["A", "R"].map((letter, i) => (
             <motion.span
               key={letter}
@@ -126,14 +128,14 @@ export default function Hero() {
           ARQDEV
         </motion.p>
 
-        {/* Workflow Schema — desktop only */}
+        {/* Hero Sphere — desktop only */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.8, duration: 1 }}
-          className="w-full max-w-5xl hidden md:block"
+          transition={{ delay: 0.8, duration: 1.5 }}
+          className="w-full max-w-2xl hidden md:block"
         >
-          <WorkflowSchema />
+          <HeroSphere />
         </motion.div>
 
         {/* Mobile: simplified tagline */}
@@ -142,7 +144,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.2 }}
-            className="font-mono text-[11px] tracking-[3px] text-white/30 text-center"
+            className="font-mono text-[11px] tracking-[3px] text-white/40 text-center"
           >
             CONCEVOIR · DÉVELOPPER · ARCHITECTURER
             <br />
@@ -155,8 +157,11 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 3.2, duration: 0.8 }}
-          className="mt-8 md:mt-10 h-6"
+          className="mt-8 md:mt-10 h-8"
         >
+          <div className="inline-block px-4 py-1 rounded"
+            style={{ background: "rgba(4,5,14,0.5)" }}
+          >
           <TypingText
             texts={[
               "De l\u2019id\u00e9e au d\u00e9ploiement \u2014 un pipeline complet.",
@@ -165,8 +170,10 @@ export default function Hero() {
               "APIs robustes & scalables",
               "Automatisation IA & workflows",
             ]}
-            className="font-mono text-[12px] tracking-[2px] text-white/25"
+            className="font-mono text-[12px] tracking-[2px] text-white/70"
+            style={{ textShadow: "0 0 30px rgba(0,0,0,1), 0 0 10px rgba(0,0,0,1)" }}
           />
+          </div>
         </motion.div>
 
         {/* CTA */}
@@ -188,11 +195,11 @@ export default function Hero() {
           transition={{ delay: 3.6, duration: 0.8 }}
           className="mt-10 flex flex-wrap justify-center gap-2"
         >
-          {["React Native", "TypeScript", "Next.js", "Node.js", "MongoDB", "Firebase"].map(
+          {["React Native", "TypeScript", "Next.js", "Node.js", "MongoDB", "Firebase", "Anthropic"].map(
             (tech) => (
               <span
                 key={tech}
-                className="px-3 py-1.5 rounded-full text-[11px] font-mono text-white/50 border border-brand/[0.2] bg-gradient-to-r from-brand/[0.1] to-accent-purple/[0.06]"
+                className="px-3 py-1.5 rounded-full text-[11px] font-mono text-[#c4b5fd] border border-[rgba(139,92,246,0.25)] bg-[rgba(109,40,217,0.08)]"
               >
                 {tech}
               </span>
@@ -222,7 +229,7 @@ export default function Hero() {
                 style={{ background: "radial-gradient(circle, #a855f7, #9333ea)", boxShadow: "0 0 6px rgba(147,51,234,0.6)" }}
               />
             </div>
-            <ChevronDown className="w-4 h-4 text-white/15" />
+            <ChevronDown className="w-4 h-4 text-white/25" />
           </motion.div>
         </motion.div>
       </div>

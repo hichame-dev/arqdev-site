@@ -162,10 +162,12 @@ export default function WorkflowNode({
         x={cx}
         y={y + nodeSize + 20}
         textAnchor="middle"
-        fill="rgba(255,255,255,0.55)"
+        fill="#e2d9f3"
         fontSize={9}
         fontFamily="var(--font-space-mono)"
-        letterSpacing="1.5px"
+        fontWeight="600"
+        letterSpacing="0.12em"
+        style={{ textShadow: "0 0 20px rgba(0,0,0,0.9), 0 1px 3px rgba(0,0,0,1)" }}
       >
         {label}
       </text>

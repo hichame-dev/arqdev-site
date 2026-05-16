@@ -53,15 +53,15 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
       style={scrolled ? {
-        background: "linear-gradient(180deg, rgba(4,4,10,0.9) 0%, rgba(4,4,10,0.8) 100%)",
-        boxShadow: "0 4px 30px rgba(0,0,0,0.3), 0 0 40px rgba(147,51,234,0.03), inset 0 -1px 0 rgba(147,51,234,0.06)",
+        background: "linear-gradient(180deg, rgba(10,10,20,0.92) 0%, rgba(10,10,20,0.85) 100%)",
+        boxShadow: "0 4px 30px rgba(0,0,0,0.5), 0 0 40px rgba(147,51,234,0.06), inset 0 -1px 0 rgba(147,51,234,0.1)",
       } : undefined}
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8 h-16 flex items-center justify-between">
         {/* Logo */}
         <button
           onClick={() => handleClick("#hero")}
-          className="group flex items-center gap-1 font-extrabold text-lg tracking-[4px] text-[#f0f0f5]"
+          className="group flex items-center gap-1 font-extrabold text-lg tracking-[4px] text-white"
         >
           AR
           <span className="text-brand transition-colors group-hover:text-brand-glow">
@@ -96,7 +96,7 @@ export default function Navbar() {
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden text-white/60"
+          className="md:hidden text-black/60"
           onClick={() => setMobileOpen(!mobileOpen)}
         >
           {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -110,7 +110,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-surface-mid/95 backdrop-blur-xl border-b border-brand/[0.06] overflow-hidden"
+            className="md:hidden bg-[#0d0d14]/95 backdrop-blur-xl border-b border-brand/[0.1] overflow-hidden"
           >
             <div className="px-6 py-6 flex flex-col gap-4">
               {NAV_LINKS.map((link) => (

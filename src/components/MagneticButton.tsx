@@ -41,10 +41,11 @@ export default function MagneticButton({
   };
 
   const primaryStyle = {
-    background: "linear-gradient(135deg, #9333ea 0%, #a855f7 50%, #c084fc 100%)",
+    background: "linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%)",
+    border: "1px solid rgba(167, 139, 250, 0.3)",
     boxShadow: isHovered
-      ? "0 0 30px rgba(147,51,234,0.5), 0 0 60px rgba(147,51,234,0.25), 0 0 100px rgba(192,132,252,0.15), inset 0 1px 0 rgba(255,255,255,0.2)"
-      : "0 0 20px rgba(147,51,234,0.35), 0 0 50px rgba(147,51,234,0.15), inset 0 1px 0 rgba(255,255,255,0.15)",
+      ? "0 0 48px rgba(124,58,237,0.6), 0 0 80px rgba(124,58,237,0.2), inset 0 1px 0 rgba(255,255,255,0.15)"
+      : "0 0 32px rgba(124,58,237,0.4), 0 0 64px rgba(124,58,237,0.15), inset 0 1px 0 rgba(255,255,255,0.1)",
   };
 
   const secondaryStyle = {
@@ -63,7 +64,7 @@ export default function MagneticButton({
       onMouseLeave={handleMouseLeave}
       animate={{ x: position.x, y: position.y }}
       transition={{ type: "spring", stiffness: 350, damping: 15, mass: 0.5 }}
-      className={`relative inline-block px-8 py-3.5 rounded-xl font-semibold text-sm tracking-wide cursor-pointer overflow-hidden transition-all duration-300 ${variant === "primary" ? "text-white" : "text-white/80 hover:text-white"} ${className}`}
+      className={`relative inline-block px-8 py-3.5 rounded-xl font-semibold text-sm tracking-wide cursor-pointer overflow-hidden transition-all duration-300 ${variant === "primary" ? "text-white" : "text-white/70 hover:text-white"} ${className}`}
       style={variant === "primary" ? primaryStyle : secondaryStyle}
     >
       {/* Top shine line */}

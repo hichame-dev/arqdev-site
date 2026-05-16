@@ -14,8 +14,8 @@ function MarqueeRow({
   return (
     <div className="overflow-hidden relative">
       {/* Edge fades */}
-      <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-surface to-transparent z-10" />
-      <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-surface to-transparent z-10" />
+      <div className="absolute left-0 top-0 bottom-0 w-24 z-10" style={{ background: "linear-gradient(to right, #000000, transparent)" }} />
+      <div className="absolute right-0 top-0 bottom-0 w-24 z-10" style={{ background: "linear-gradient(to left, #000000, transparent)" }} />
 
       <div
         className={`flex gap-12 whitespace-nowrap ${
@@ -34,7 +34,7 @@ function MarqueeRow({
                 boxShadow: `0 0 6px ${tech.color}60, 0 0 16px ${tech.color}25`,
               }}
             />
-            <span className="font-mono text-[13px] tracking-[4px] text-white/20 uppercase">
+            <span className="font-mono text-[13px] tracking-[4px] text-white/40 uppercase">
               {tech.name}
             </span>
           </div>
@@ -46,7 +46,7 @@ function MarqueeRow({
 
 export default function TechMarquee() {
   return (
-    <section className="py-12 bg-surface border-y border-brand/[0.05]">
+    <section className="py-12" style={{ background: "transparent" }}>
       <div className="flex flex-col gap-6">
         <MarqueeRow items={TECH_STACK_ROW1} />
         <MarqueeRow items={TECH_STACK_ROW2} reverse />

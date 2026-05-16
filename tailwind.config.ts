@@ -22,9 +22,9 @@ const config: Config = {
           magenta: "#f08dff",
         },
         surface: {
-          DEFAULT: "#04040a",
-          mid: "#0a0a14",
-          light: "#0f0f1a",
+          DEFAULT: "#000000",
+          mid: "#050507",
+          light: "#0a0a0f",
         },
       },
       fontFamily: {

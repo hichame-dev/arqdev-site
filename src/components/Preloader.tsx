@@ -50,7 +50,7 @@ export default function Preloader() {
 
             {/* Brand text */}
             <motion.p
-              className="mt-4 font-extrabold text-sm tracking-[6px] text-[#f0f0f5]"
+              className="mt-4 font-extrabold text-sm tracking-[6px] text-white"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.5 }}
