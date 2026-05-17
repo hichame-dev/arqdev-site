@@ -8,6 +8,7 @@ interface TypingTextProps {
   deleteSpeed?: number;
   pauseDuration?: number;
   className?: string;
+  style?: React.CSSProperties;
 }
 
 export default function TypingText({
@@ -16,6 +17,7 @@ export default function TypingText({
   deleteSpeed = 30,
   pauseDuration = 2000,
   className,
+  style,
 }: TypingTextProps) {
   const [displayed, setDisplayed] = useState("");
   const [textIndex, setTextIndex] = useState(0);
@@ -52,7 +54,7 @@ export default function TypingText({
   }, [displayed, textIndex, isDeleting, texts, speed, deleteSpeed, pauseDuration]);
 
   return (
-    <span className={className}>
+    <span className={className} style={style}>
       {displayed}
       <span className="animate-typing-cursor text-brand">|</span>
     </span>
