@@ -46,7 +46,7 @@ export default function Hero() {
       </div>
 
       {/* === CONTENT === */}
-      <div className="relative z-10 h-full flex flex-col items-center justify-center px-6 pb-20">
+      <div className="relative z-10 h-full flex flex-col items-center justify-center px-6 pb-20 pt-4">
         {/* Eyebrow */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
