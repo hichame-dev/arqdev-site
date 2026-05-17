@@ -46,7 +46,7 @@ export default function Hero() {
       </div>
 
       {/* === CONTENT === */}
-      <div className="relative z-10 h-full flex flex-col items-center justify-center px-6">
+      <div className="relative z-10 h-full flex flex-col items-center justify-center px-6 pb-20">
         {/* Eyebrow */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -212,7 +212,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 3.8, duration: 0.8 }}
-          className="absolute bottom-8"
+          className="absolute bottom-2"
         >
           <motion.div
             animate={{ y: [0, 8, 0] }}
