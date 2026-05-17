@@ -46,18 +46,7 @@ export default function Hero() {
       </div>
 
       {/* === CONTENT === */}
-      <div className="relative z-10 h-full flex flex-col items-center justify-center px-6 pb-20 pt-4">
-        {/* Eyebrow */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="font-mono text-[13px] font-bold tracking-[7px] uppercase mb-6"
-          style={{ color: "#7a91b8" }}
-        >
-          DÉVELOPPEUR FULLSTACK · FREELANCE · MARSEILLE
-        </motion.p>
-
+      <div className="relative z-10 h-full flex flex-col items-center justify-center px-6">
         {/* Logo — staggered letter animation */}
         <h1
           className="text-[60px] sm:text-[80px] md:text-[100px] lg:text-[120px] font-extrabold tracking-[12px] md:tracking-[14px] leading-none flex items-center"

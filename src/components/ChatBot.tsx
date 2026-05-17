@@ -82,7 +82,7 @@ export default function ChatBot() {
                   △
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-[#0a0a14]">
+                  <p className="text-sm font-semibold text-white">
                     ARQDEV Assistant
                   </p>
                   <div className="flex items-center gap-1.5">
@@ -95,7 +95,7 @@ export default function ChatBot() {
               </div>
               <button
                 onClick={() => setIsOpen(false)}
-                className="text-black/40 hover:text-black/60 transition-colors"
+                className="text-white/40 hover:text-white/60 transition-colors"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -112,7 +112,7 @@ export default function ChatBot() {
                     className={`max-w-[80%] px-4 py-2.5 rounded-2xl text-[11px] font-mono leading-relaxed ${
                       msg.role === "user"
                         ? "bg-gradient-to-r from-brand to-accent-purple text-white rounded-br-sm"
-                        : "bg-black/[0.04] border border-brand/[0.06] text-black/70 rounded-bl-sm"
+                        : "bg-white/[0.06] border border-brand/[0.15] text-white/75 rounded-bl-sm"
                     }`}
                   >
                     {msg.content}
@@ -121,7 +121,7 @@ export default function ChatBot() {
               ))}
               {isLoading && (
                 <div className="flex justify-start">
-                  <div className="px-4 py-2.5 rounded-2xl bg-black/[0.04] border border-brand/[0.06] rounded-bl-sm">
+                  <div className="px-4 py-2.5 rounded-2xl bg-white/[0.06] border border-brand/[0.15] rounded-bl-sm">
                     <Loader2 className="w-4 h-4 text-brand animate-spin" />
                   </div>
                 </div>
@@ -137,7 +137,7 @@ export default function ChatBot() {
                   onChange={(e) => setInput(e.target.value)}
                   onKeyDown={(e) => e.key === "Enter" && sendMessage()}
                   placeholder="Votre message..."
-                  className="flex-1 bg-black/[0.04] border border-brand/[0.12] rounded-lg px-4 py-2.5 text-[11px] font-mono text-black/80 placeholder:text-black/30 focus:outline-none focus:border-brand/30"
+                  className="flex-1 bg-white/[0.06] border border-brand/[0.15] rounded-lg px-4 py-2.5 text-[11px] font-mono text-white/80 placeholder:text-white/30 focus:outline-none focus:border-brand/40"
                 />
                 <button
                   onClick={sendMessage}
