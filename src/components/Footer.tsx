@@ -1,6 +1,6 @@
 "use client";
 
-import { Github, Linkedin, Mail, MapPin, Sparkles } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin } from "lucide-react";
 import { SITE_CONFIG } from "@/lib/constants";
 
 export default function Footer() {
@@ -113,7 +113,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-12 pt-6 border-t border-white/[0.06] flex flex-col md:flex-row items-center justify-between gap-3">
           <p className="font-mono text-[10px] tracking-[2px] text-white/50">
-            &copy; {currentYear} {SITE_CONFIG.namePlain} &mdash; Tous droits r&eacute;serv&eacute;s
+            &copy; {currentYear} {SITE_CONFIG.namePlain} &middot; Tous droits r&eacute;serv&eacute;s
           </p>
           <div className="flex items-center gap-4">
             <p className="font-mono text-[10px] tracking-[2px] text-white/40">
@@ -124,13 +124,6 @@ export default function Footer() {
               Conçu par {SITE_CONFIG.founder}
             </p>
           </div>
-        </div>
-
-        <div className="mt-4 flex items-center justify-center gap-2">
-          <Sparkles className="w-3 h-3 text-brand/70" />
-          <p className="font-mono text-[10px] tracking-[2px] text-white/45">
-            Certains contenus rédactionnels ont été assistés par IA
-          </p>
         </div>
       </div>
     </footer>

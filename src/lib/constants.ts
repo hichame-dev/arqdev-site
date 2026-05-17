@@ -87,7 +87,7 @@ export const SERVICES: Service[] = [
   {
     icon: "/asset/code-dev.png",
     title: "Apps Mobile",
-    description: "iOS & Android \u2014 React Native",
+    description: "iOS & Android \u00b7 React Native",
     accent: "#9333ea",
     details: [
       "React Native / Expo",
@@ -99,7 +99,7 @@ export const SERVICES: Service[] = [
   {
     icon: "/asset/laptop-web.png",
     title: "Web & APIs",
-    description: "Full Stack \u2014 Node.js \u00b7 Next.js",
+    description: "Full Stack \u00b7 Node.js \u00b7 Next.js",
     accent: "#c084fc",
     details: [
       "Next.js / React",
@@ -111,7 +111,7 @@ export const SERVICES: Service[] = [
   {
     icon: "/asset/chip-archi.png",
     title: "Architecture",
-    description: "Scalable \u2014 Cloud \u00b7 DevOps",
+    description: "Scalable \u00b7 Cloud \u00b7 DevOps",
     accent: "#3ee0f5",
     details: [
       "Architecture microservices",

@@ -153,7 +153,7 @@ export default function Hero() {
           >
           <TypingText
             texts={[
-              "De l\u2019id\u00e9e au d\u00e9ploiement \u2014 un pipeline complet.",
+              "De l\u2019id\u00e9e au d\u00e9ploiement, un pipeline complet.",
               "Applications mobiles React Native",
               "Plateformes web Next.js",
               "APIs robustes & scalables",
