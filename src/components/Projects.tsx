@@ -59,7 +59,7 @@ export default function Projects() {
             Du concept au store
           </h2>
           <p className="mt-4 text-white/65 max-w-xl leading-relaxed">
-            Une seule codebase React Native pour iOS et Android — du design à la mise en production, frontend, backend et cloud inclus.
+            Une seule codebase React Native pour iOS et Android, du design à la mise en production, frontend, backend et cloud inclus.
           </p>
         </ScrollReveal>
 

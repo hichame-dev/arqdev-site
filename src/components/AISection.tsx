@@ -30,7 +30,7 @@ export default function AISection() {
 
             <p className="text-sm text-white/50 leading-relaxed mb-6 max-w-lg">
               Intégration d&apos;agents intelligents, automatisation des workflows,
-              chatbots conversationnels. L&apos;IA n&apos;est pas un buzzword — c&apos;est
+              chatbots conversationnels. L&apos;IA n&apos;est pas un buzzword, c&apos;est
               un outil concret.
             </p>
 
@@ -60,7 +60,7 @@ export default function AISection() {
           <div className="relative min-h-[300px] md:min-h-[450px]">
             <Image
               src="/asset/site.png"
-              alt="Intelligence Artificielle — ARQDEV"
+              alt="Intelligence Artificielle ARQDEV"
               fill
               className="object-cover object-center"
               style={{ filter: "saturate(0.8) brightness(0.9)" }}
