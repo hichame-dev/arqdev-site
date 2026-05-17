@@ -212,7 +212,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 3.8, duration: 0.8 }}
-          className="absolute bottom-2"
+          className="absolute" style={{ bottom: '-7px' }}
         >
           <motion.div
             animate={{ y: [0, 8, 0] }}
