@@ -3,7 +3,9 @@
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
 
-const LABELS = [
+type Label = { text: string; color: string; top?: string; bottom?: string; left?: string; right?: string };
+
+const LABELS: Label[] = [
   { text: "CONCEVOIR",     top: "8%",   left: "2%",   color: "#c084fc" },
   { text: "DÉVELOPPER",    top: "22%",  right: "2%",  color: "#9333ea" },
   { text: "ARCHITECTURER", top: "50%",  right: "2%",  color: "#06b6d4" },
@@ -198,7 +200,7 @@ export default function HeroSphere() {
         <div
           key={l.text}
           className="absolute flex items-center gap-2 pointer-events-none"
-          style={{ top: l.top, bottom: (l as any).bottom, left: (l as any).left, right: (l as any).right }}
+          style={{ top: l.top, bottom: l.bottom, left: l.left, right: l.right }}
         >
           <span
             className="w-2 h-2 rounded-full shrink-0"
