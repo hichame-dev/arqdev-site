@@ -1,6 +1,6 @@
 "use client";
 
-import { Github, Linkedin, Mail, MapPin } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin, Sparkles } from "lucide-react";
 import { SITE_CONFIG } from "@/lib/constants";
 
 export default function Footer() {
@@ -124,6 +124,13 @@ export default function Footer() {
               Conçu par {SITE_CONFIG.founder}
             </p>
           </div>
+        </div>
+
+        <div className="mt-4 flex items-center justify-center gap-2">
+          <Sparkles className="w-3 h-3 text-brand/70" />
+          <p className="font-mono text-[10px] tracking-[2px] text-white/45">
+            Certains contenus rédactionnels ont été assistés par IA
+          </p>
         </div>
       </div>
     </footer>
