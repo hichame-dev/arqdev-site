@@ -33,7 +33,7 @@ const apps: AppEntry[] = [
     metrics: [
       { value: "iOS / Android", label: "plateformes" },
       { value: "< 2 s", label: "cold start" },
-      { value: "Live", label: "en production" },
+      { value: "Dev", label: "phase" },
     ],
   },
   {
