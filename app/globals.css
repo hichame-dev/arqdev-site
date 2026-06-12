@@ -1,0 +1,177 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ink: #0A0A0A;
+  --smoke: #1A1A1A;
+  --paper: #F2EDE4;
+  --bone: #EDE6D6;
+  --mist: #F8F5EE;
+  --signal: #8A7855;
+  --muted: #6B6B6B;
+
+  --metal-light: #E8D5A8;
+  --metal-mid: #9A8055;
+  --metal-dark: #3D3220;
+  --metal-surface: linear-gradient(135deg, #E8D5A8 0%, #9A8055 42%, #3D3220 64%, #9A8055 84%, #D4BF8E 100%);
+  --metal-surface-hover: linear-gradient(135deg, #F0DFB8 0%, #A88D60 42%, #4E4128 64%, #A88D60 84%, #DCCA9E 100%);
+  --metal-line: linear-gradient(90deg, transparent 0%, #3D3220 10%, #E8D5A8 50%, #3D3220 90%, transparent 100%);
+
+  --background: var(--ink);
+  --foreground: var(--paper);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: auto !important;
+  /* `clip` (et non hidden) : bloque le scroll horizontal parasite des éléments
+     translatés hors-écran par les animations, sans créer de scroll container. */
+  overflow-x: clip;
+}
+
+/* Les ancres tiennent compte de la navbar fixe (64px). */
+section[id] {
+  scroll-margin-top: 72px;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-weight: 700;
+  line-height: 1.08;
+}
+
+h1, h2 {
+  letter-spacing: -0.035em;
+}
+
+::selection {
+  background: #3D3220;
+  color: #F2EDE4;
+}
+
+.metal-surface {
+  background: var(--metal-surface);
+  background-size: 200% 100%;
+  background-position: 0% 50%;
+  transition: background-position 0.5s ease, filter 0.3s ease;
+}
+
+.metal-surface:hover {
+  background-position: 100% 50%;
+  filter: brightness(1.1);
+}
+
+.metal-text {
+  background: linear-gradient(135deg, #F0DFB8 0%, #A88D60 50%, #4E4128 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.metal-line {
+  background: var(--metal-line);
+}
+
+/* Hero starts hidden until IntroAnimation reveals it (first visit or repeat).
+   The inline script in layout.tsx toggles `intro-played` on <html> synchronously
+   from sessionStorage so repeat visits don't flash invisible content. */
+html:not(.intro-played) .hero-reveal {
+  opacity: 0;
+}
+
+.bg-deep-black {
+  background: var(--ink);
+  position: relative;
+}
+
+/* Nav link — underline slides left → right on hover */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: linear-gradient(90deg, #E8D5A8 0%, #3D3220 100%);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Titre hero : la formule desktop (6.2vw, min 44px) fait déborder
+   « développement. » sous 480px — clamp dédié en mobile. */
+.hero-title {
+  font-size: clamp(44px, 6.2vw, 86px);
+}
+
+@media (max-width: 640px) {
+  .hero-title {
+    font-size: clamp(30px, 10.4vw, 44px);
+  }
+}
+
+/* Focus clavier visible sur fond sombre comme clair */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #E8D5A8;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Champs du formulaire : la bordure s'allume au focus */
+input:focus,
+textarea:focus {
+  border-bottom-color: #E8D5A8 !important;
+}
+
+/* Floating code snippets over the 3D scene */
+@keyframes hero-code-float {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-8px); }
+}
+
+.noise::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  pointer-events: none;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 128px 128px;
+  mix-blend-mode: overlay;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
