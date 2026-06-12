@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans, Inter, Space_Mono } from "next/font/google";
+import { Space_Grotesk, Inter, Space_Mono } from "next/font/google";
 import LenisProvider from "@/components/providers/LenisProvider";
 import IntroAnimation from "@/components/ui/IntroAnimation";
 import "./globals.css";
 
-const displayFont = Plus_Jakarta_Sans({
+const displayFont = Space_Grotesk({
   variable: "--font-display",
   subsets: ["latin"],
-  weight: ["500", "600", "700", "800"],
+  weight: ["500", "600", "700"],
   display: "swap",
 });
 
