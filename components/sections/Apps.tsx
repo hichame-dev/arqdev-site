@@ -41,7 +41,7 @@ const apps: AppEntry[] = [
     name: "RoadtripPark",
     tagline: "Plan & Park",
     description:
-      "Planifiez vos road trips en van. Itinéraires curatés, parkings vérifiés, navigation intégrée.",
+      "Road trips en van clés en main. Itinéraires curatés, parkings vérifiés, navigation intégrée.",
     image: "/brand/RoadtripPark.jpg",
     stack: "React Native · Node.js · MongoDB · AWS",
     metrics: [

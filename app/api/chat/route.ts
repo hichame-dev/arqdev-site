@@ -12,7 +12,7 @@ Spécialité IA : Claude API, Groq API (c'est moi !), MCP Protocol, agents IA au
 
 Applications du studio :
 - MotorQuest : GPS moto gamifié — tracking temps réel, challenges, XP, classements (iOS/Android, en développement)
-- RoadtripPark : planification de road trips en van — itinéraires, parkings vérifiés, navigation (beta)
+- RoadtripPark : road trips en van clés en main — itinéraires curatés, parkings vérifiés, navigation (beta)
 
 Langues parlées : français, anglais, arabe/marocain, espagnol.
 
