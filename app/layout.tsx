@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Space_Grotesk, Inter, Space_Mono } from "next/font/google";
 import LenisProvider from "@/components/providers/LenisProvider";
 import IntroAnimation from "@/components/ui/IntroAnimation";
+import { SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 const displayFont = Space_Grotesk({
@@ -28,7 +29,7 @@ const DESCRIPTION =
   "Studio de développement à Marseille — apps mobiles React Native, web, backend, agents IA et formations IA pour les équipes.";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://arqdev.dev"),
+  metadataBase: new URL(SITE_URL),
   alternates: { canonical: "/" },
   title: "ARQDEV — Studio de développement · Marseille",
   description: DESCRIPTION,
@@ -63,7 +64,7 @@ const JSON_LD = {
   "@type": "ProfessionalService",
   name: "ARQDEV",
   description: DESCRIPTION,
-  url: "https://arqdev.dev",
+  url: SITE_URL,
   email: "arqdev@outlook.fr",
   address: {
     "@type": "PostalAddress",
