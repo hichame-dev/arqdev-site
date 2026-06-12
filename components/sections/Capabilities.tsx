@@ -1,7 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
+import {
+  Smartphone,
+  Globe,
+  Database,
+  Sparkles,
+  Gauge,
+  type LucideIcon,
+} from "lucide-react";
 import { staggerContainer, fadeInUp } from "@/lib/animations";
+import GlossyIcon from "@/components/ui/GlossyIcon";
 
 const MONO = "var(--font-space-mono), ui-monospace, monospace";
 const INTER = "var(--font-inter), system-ui, sans-serif";
@@ -10,6 +19,7 @@ const DISPLAY = "var(--font-display), system-ui, sans-serif";
 type Capability = {
   number: string;
   discipline: string;
+  icon: LucideIcon;
   line: string;
   stack: string[];
 };
@@ -18,30 +28,35 @@ const capabilities: Capability[] = [
   {
     number: "01",
     discipline: "Mobile",
+    icon: Smartphone,
     line: "Applications natives et cross-platform, du prototype au store.",
     stack: ["React Native", "Expo", "Swift", "Kotlin", "Mapbox", "Firebase"],
   },
   {
     number: "02",
     discipline: "Web",
+    icon: Globe,
     line: "Sites vitrines, dashboards et produits web performants.",
     stack: ["Next.js", "React", "TypeScript", "Tailwind", "Framer Motion"],
   },
   {
     number: "03",
     discipline: "Backend",
+    icon: Database,
     line: "APIs typées, bases solides, infra reproductible.",
     stack: ["Node.js", "Express", "MongoDB", "PostgreSQL", "AWS", "Docker"],
   },
   {
     number: "04",
     discipline: "IA & Automatisation",
+    icon: Sparkles,
     line: "Agents, chatbots, workflows — l'IA intégrée à vos produits et vos process. Formation de vos équipes incluse.",
     stack: ["Claude API", "Groq", "MCP", "Agents IA", "n8n", "Prompt Engineering"],
   },
   {
     number: "05",
     discipline: "Optimisation",
+    icon: Gauge,
     line: "Sites existants remis au niveau — perf, SEO, accessibilité.",
     stack: ["Lighthouse", "Core Web Vitals", "Bundle analysis", "SEO technique"],
   },
@@ -129,7 +144,8 @@ export default function Capabilities() {
                 borderBottom: "1px solid rgba(10, 10, 10, 0.12)",
               }}
             >
-              <div className="col-span-12 sm:col-span-2 flex items-baseline gap-3">
+              <div className="col-span-12 sm:col-span-2 flex items-center gap-3">
+                <GlossyIcon icon={cap.icon} size={40} />
                 <span
                   style={{
                     fontFamily: MONO,
@@ -141,16 +157,6 @@ export default function Capabilities() {
                 >
                   {cap.number}
                 </span>
-                <span
-                  aria-hidden
-                  style={{
-                    height: 1,
-                    flex: 1,
-                    background: "rgba(10, 10, 10, 0.15)",
-                    maxWidth: 24,
-                  }}
-                  className="hidden sm:block"
-                />
               </div>
 
               <div className="col-span-12 sm:col-span-3">

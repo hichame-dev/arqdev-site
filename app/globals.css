@@ -88,6 +88,53 @@ h1, h2 {
   background: var(--metal-line);
 }
 
+.glossy-icon {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 27%;
+  color: #0A0A0A;
+  background: var(--metal-surface);
+  background-size: 200% 100%;
+  background-position: 0% 50%;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.5) inset,
+    0 -2px 5px rgba(0, 0, 0, 0.35) inset,
+    0 10px 24px -10px rgba(0, 0, 0, 0.55);
+  transform: perspective(400px);
+  transition:
+    transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+    background-position 0.5s ease,
+    box-shadow 0.35s ease;
+}
+
+/* Reflet « verre » sur la moitié haute de la pastille. */
+.glossy-icon::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.38) 0%,
+    rgba(255, 255, 255, 0.08) 30%,
+    transparent 55%
+  );
+  pointer-events: none;
+}
+
+.group:hover .glossy-icon,
+.glossy-icon:hover {
+  background-position: 100% 50%;
+  transform: perspective(400px) rotateX(10deg) rotateY(-8deg) translateY(-2px);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.55) inset,
+    0 -2px 5px rgba(0, 0, 0, 0.35) inset,
+    0 14px 30px -10px rgba(232, 213, 168, 0.3);
+}
+
 /* Hero starts hidden until IntroAnimation reveals it (first visit or repeat).
    The inline script in layout.tsx toggles `intro-played` on <html> synchronously
    from sessionStorage so repeat visits don't flash invisible content. */

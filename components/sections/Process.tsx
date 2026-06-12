@@ -1,7 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Compass, CodeXml, Rocket } from "lucide-react";
 import { staggerContainer, fadeInUp } from "@/lib/animations";
+import GlossyIcon from "@/components/ui/GlossyIcon";
 
 const MONO = "var(--font-space-mono), ui-monospace, monospace";
 const INTER = "var(--font-inter), system-ui, sans-serif";
@@ -11,18 +13,21 @@ const steps = [
   {
     number: "01",
     title: "Cadrage",
+    icon: Compass,
     description:
       "On commence par comprendre. Utilisateurs, contraintes, métriques. Avant d'écrire une ligne.",
   },
   {
     number: "02",
     title: "Build",
+    icon: CodeXml,
     description:
       "Architecture pensée pour tenir. Code typé, APIs documentées, itérations courtes, tests qui comptent.",
   },
   {
     number: "03",
     title: "Livraison",
+    icon: Rocket,
     description:
       "Stores, scaling, observabilité. On déploie, on mesure, on reste disponibles après le lancement.",
   },
@@ -110,7 +115,17 @@ export default function Process() {
                 transition: "background 0.3s ease",
               }}
             >
-              <div className="flex items-center justify-between mb-10">
+              <div className="flex items-center mb-10">
+                <GlossyIcon icon={step.icon} size={52} />
+                <span
+                  aria-hidden
+                  style={{
+                    flex: 1,
+                    margin: "0 16px",
+                    height: 1,
+                    background: "rgba(242, 237, 228, 0.1)",
+                  }}
+                />
                 <span
                   style={{
                     fontFamily: MONO,
@@ -122,15 +137,6 @@ export default function Process() {
                 >
                   {step.number}
                 </span>
-                <span
-                  aria-hidden
-                  style={{
-                    flex: 1,
-                    marginLeft: 16,
-                    height: 1,
-                    background: "rgba(242, 237, 228, 0.1)",
-                  }}
-                />
               </div>
 
               <h3
