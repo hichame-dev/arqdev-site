@@ -10,7 +10,7 @@ const INTER = "var(--font-inter), system-ui, sans-serif";
 
 const values = [
   { num: "01", text: "Architecture avant le code." },
-  { num: "02", text: "Chaque feature justifiée par l'usage." },
+  { num: "02", text: "Chaque fonctionnalité justifiée par l'usage." },
   { num: "03", text: "Du prototype au store en quelques semaines." },
 ];
 
@@ -79,9 +79,9 @@ export default function About() {
               }}
             >
               Studio de développement fondé à Marseille — mobile, web, backend
-              et IA. Une seule obsession&nbsp;: livrer des produits qui
-              fonctionnent, scalent et convertissent. Pas de dette technique
-              cachée, pas de promesse qu&apos;on ne peut pas tenir.
+              et IA. Une seule exigence&nbsp;: livrer des produits fiables,
+              performants et pensés pour durer. Sans dette technique cachée,
+              sans promesse intenable.
             </p>
           </motion.div>
 

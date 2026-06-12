@@ -123,8 +123,9 @@ export default function Capabilities() {
               maxWidth: "360px",
             }}
           >
-            Mobile en premier, mais pas que. Web, backend, intégration IA et
-            optimisation — toute la chaîne quand le projet le demande.
+            Du mobile au web, du backend à l&apos;intégration IA et à
+            l&apos;optimisation — nous couvrons toute la chaîne quand le
+            projet le demande.
           </p>
         </motion.div>
 

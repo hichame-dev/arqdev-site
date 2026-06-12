@@ -78,7 +78,7 @@ export default function Process() {
             >
               Trois étapes.
               <br />
-              Aucune bavure.
+              Zéro approximation.
             </h2>
           </div>
           <p
@@ -90,8 +90,8 @@ export default function Process() {
               maxWidth: "340px",
             }}
           >
-            Une méthode simple, éprouvée sur chaque projet. Pas de cérémonie,
-            pas de slides — du produit qui livre.
+            Une méthode simple, éprouvée sur chaque projet. L&apos;essentiel,
+            sans détour&nbsp;: un produit livré, mesuré et maintenu.
           </p>
         </motion.div>
 

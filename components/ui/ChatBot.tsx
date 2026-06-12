@@ -18,7 +18,7 @@ export default function ChatBot() {
     {
       role: "assistant",
       content:
-        "Salut ! 👋 Je suis l'assistant d'ARQDEV. Une question sur le studio, la stack ou un projet ?",
+        "Bonjour 👋 Je suis l'assistant ARQDEV. Une question sur le studio, nos services ou votre projet ?",
     },
   ]);
   const [input, setInput] = useState("");

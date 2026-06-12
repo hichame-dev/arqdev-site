@@ -27,7 +27,7 @@ const apps: AppEntry[] = [
     name: "MotorQuest",
     tagline: "Ride Beyond",
     description:
-      "GPS moto gamifié. Trackez vos sessions, débloquez des achievements, affrontez votre historique.",
+      "GPS moto gamifié. Suivi de sessions en temps réel, défis et progression, classements entre riders.",
     image: "/brand/MotorQuest.jpg",
     stack: "React Native · Expo · Mapbox · Firebase",
     metrics: [
@@ -166,9 +166,9 @@ export default function Apps() {
                 color: "#F2EDE4",
               }}
             >
-              Des produits,
+              Des produits conçus
               <br />
-              pas des démos.
+              de bout en bout.
             </h2>
           </div>
         </motion.div>

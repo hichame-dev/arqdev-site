@@ -140,8 +140,8 @@ export default function Contact() {
                   maxWidth: "340px",
                 }}
               >
-                Réponse sous 24 h ouvrées. On cale un appel pour comprendre votre
-                projet, on revient avec un plan.
+                Réponse sous 24&nbsp;h ouvrées. Nous échangeons sur votre
+                projet, puis revenons vers vous avec une proposition claire.
               </p>
 
               <div className="flex items-center gap-6 pt-6">
