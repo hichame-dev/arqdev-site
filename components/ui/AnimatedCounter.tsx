@@ -13,9 +13,9 @@ interface CounterItem {
 }
 
 const counters: CounterItem[] = [
-  { value: 25, suffix: "", label: "itinéraires" },
-  { value: 400, suffix: "+", label: "tests" },
-  { value: 2, suffix: "", label: "apps en développement" },
+  { value: 3, suffix: "", label: "chantiers en cours" },
+  { value: 2, suffix: "", label: "apps mobiles au studio" },
+  { value: 1, suffix: "", label: "bêta sur le Play Store" },
 ];
 
 function Counter({ value, suffix }: { value: number; suffix: string }) {

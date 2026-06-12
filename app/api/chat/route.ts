@@ -10,9 +10,9 @@ Stack : React Native, Expo, React, TypeScript, Next.js, Node.js, Express, MongoD
 
 Spécialité IA : Claude API, Groq API (c'est moi !), MCP Protocol, agents IA autonomes, Prompt Engineering, n8n, intégration LLM. ARQDEV propose aussi des formations IA pour les équipes (audit, ateliers pratiques, intégration dans les process).
 
-Applications du studio :
-- MotorQuest : GPS moto gamifié — tracking temps réel, challenges, XP, classements (iOS/Android, en développement)
-- RoadtripPark : road trips en van clés en main — itinéraires curatés, parkings vérifiés, navigation (beta)
+Applications du studio (3 chantiers en cours au total) :
+- MotorQuest : GPS moto gamifié — tracking temps réel, challenges, XP, classements (en développement)
+- RoadtripPark : road trips en van clés en main — itinéraires curatés, parkings vérifiés, navigation (bêta fermée sur le Play Store, sortie officielle à venir)
 
 Langues parlées : français, anglais, arabe/marocain, espagnol.
 

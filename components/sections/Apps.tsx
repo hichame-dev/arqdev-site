@@ -45,13 +45,12 @@ const apps: AppEntry[] = [
     image: "/brand/RoadtripPark.jpg",
     stack: "React Native · Node.js · MongoDB · AWS",
     metrics: [
-      { value: "iOS / Android", label: "plateformes" },
+      { value: "Android", label: "plateforme" },
       { value: "Offline-first", label: "architecture" },
-      { value: "Beta", label: "phase" },
+      { value: "Bêta fermée", label: "play store" },
     ],
-    // TODO : remplacer par les vraies URLs des stores à la sortie de la beta.
+    // TODO : URL de la fiche Play Store à la publication officielle.
     downloads: {
-      ios: "",
       android: "",
     },
   },
